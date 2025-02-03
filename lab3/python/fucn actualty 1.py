@@ -6,7 +6,7 @@ import itertools
 """
 def grams_to_ounces(grams):
     grams=float(input())
-    return 28.3495231 * grams
+    return 28.345 * grams
 """
 
 """

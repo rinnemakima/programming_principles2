@@ -10,7 +10,7 @@ def grams_to_ounces(grams):
 """
 
 """
-def fahrenheit(fahrenheit):
+def celsius(fahrenheit):
     fahrenheit=float(input())
     return (5 / 9) * (fahrenheit - 32)
 """
@@ -35,9 +35,9 @@ def prime(n):
 """
 
 """
-def filter_prime(numbers):
-    numbers = list(map(int, input().split()))
-    return [num for num in numbers if is_prime(num)]
+def filter(num):
+    num = list(map(int, input().split()))
+    return [num for num in num if prime(num)]
 """
 
 """
@@ -48,9 +48,9 @@ def string_permutations(s):
 
 """
 def reverse_words(sentence):
-    words = input()
-    words = sentence.split()
-    words.reverse()
+    sentence = input()
+    sentence.split()
+    sentence.reverse()
     return ' '.join(words)
 """
 

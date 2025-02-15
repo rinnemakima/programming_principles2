@@ -7,7 +7,7 @@ class UPPERCASEOKDA:
 """
 
 #2
-"""
+
 class Shape:
     def __init__(self):
         pass
@@ -18,10 +18,19 @@ class Square(Shape):
         self.length = lenght
     def area(self):
         return self.length ** 2
+class Cube(Square):
+    def __init__(self, length):
+        self.length = length
+    def volume(self):
+        self.volume = volume
+        volume = self.length ** 3
+        return self.length ** 3
+        
 length = float(input())
 square = Square(length)
 print(square.area())
 
+"""
 #3
 class Rectangle(Shape):
     def __init__(self, length, width):

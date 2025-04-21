@@ -2,9 +2,9 @@ import pygame
 import keyboard
 import time
 
-class oP1UM:
+class pal:
     def __init__(self):
-        self.playlist = ["Playboi Carti – Stop Breathing.mp3", "Playboi Carti – Rockstar Made.mp3", "Playboi Carti – Sky.mp3"]
+        self.playlist = ["Lullaby For The Doomed 135.5.mp3", "03. Zero.mp3", "02. Souls At Zero.mp3"]
         self.cur_index = 0
         self.is_playing = False
         self.paused_time = 0
@@ -55,7 +55,7 @@ class oP1UM:
         self.play_song()
 
 def main():
-    player = oP1UM()
+    player = pal()
 
     keyboard.add_hotkey('1', player.play_song)
     keyboard.add_hotkey('2', player.stop_song)

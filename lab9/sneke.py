@@ -68,20 +68,11 @@ def show_level(color, font, size):
  
 # game over function
 def game_over():
-   
-    # creating font
-    my_font = pygame.font.SysFont('times new roman', 50)
-     
-    # creating a text surface
-    game_over_surface = my_font.render('Your Score is : ' + str(score), True, red)
-     
+    my_font = pygame.font.SysFont('times new roman', 50)    # creating font
+    game_over_surface = my_font.render('Your Score is : ' + str(score), True, red) # creating a text surface
     game_over_rect = game_over_surface.get_rect()
-     
-    # setting position of the text
-    game_over_rect.midtop = (window_x/2, window_y/4)
-     
-    # blit will draw the text on screen
-    game_window.blit(game_over_surface, game_over_rect)
+    game_over_rect.midtop = (window_x/2, window_y/4) # setting position of the text
+    game_window.blit(game_over_surface, game_over_rect) # blit will draw the text on screen
     pygame.display.flip()
      
     time.sleep(2)
@@ -92,16 +83,10 @@ def game_over():
 CUSTOM_EVENT = pygame.USEREVENT + 1
 pygame.time.set_timer(CUSTOM_EVENT, 10000)
  
- 
 # Main Function
 while True:
-
-
-    # handling key events
-    for event in pygame.event.get():
-
-        #disapperaing fruit
-        if event.type == CUSTOM_EVENT:
+    for event in pygame.event.get(): # handling key events
+        if event.type == CUSTOM_EVENT:#disapperaing fruit
             fruit_spawn = False
 
         if event.type == pygame.QUIT:
@@ -116,8 +101,8 @@ while True:
             if event.key == pygame.K_RIGHT:
                 change_to = 'RIGHT'
  
-    # If two keys pressed simultaneously
-    if change_to == 'UP' and direction != 'DOWN':
+    
+    if change_to == 'UP' and direction != 'DOWN': # If two keys pressed simultaneously
         direction = 'UP'
     if change_to == 'DOWN' and direction != 'UP':
         direction = 'DOWN'

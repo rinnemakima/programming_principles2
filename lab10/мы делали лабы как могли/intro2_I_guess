@@ -1,0 +1,14 @@
+import psycopg2
+
+conn = psycopg2.connect(
+    host="localhost",
+    database="postgres",
+    user="postgres",
+    password="L@remIpsum228"
+)
+
+command = """SELECT version()"""
+
+with conn.cursor() as cur:
+    cur.execute(command)
+    print(cur.fetchone())

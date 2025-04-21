@@ -164,11 +164,10 @@ while not done:
             end_point, end_color, end_radius = stroke[i + 1]
             draw_rounded_line(screen, start_point, end_point, start_color, start_radius)
 
-    # Draw rectangles
+    # Figures and their properties in terms of code
     for rect in rects:
         start, end, color = rect
         pygame.draw.rect(screen, color, pygame.Rect(start, (end[0] - start[0], end[1] - start[1])))
-
     for square in squares:
         start, end, color = square
         side = max(abs(end[0] - start[0]), abs(end[1] - start[1]))
@@ -185,9 +184,6 @@ while not done:
         mid_x = (start[0] + end[0]) // 2
         mid_y = (start[1] + end[1]) // 2
         pygame.draw.polygon(screen, color, [(mid_x, start[1]), (end[0], mid_y), (mid_x, end[1]), (start[0], mid_y)])
-        
-
-    # Draw circles
     for circle in circles:
         start, end, color = circle
         radius = max(abs(end[0] - start[0]), abs(end[1] - start[1])) // 2
